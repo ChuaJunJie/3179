@@ -1,15 +1,15 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Distribution of Power Plant in US",
-  "width": 800,
-  "height": 400,
+  "title": "Distribution of Power Plant Around the World",
+  "width": 1600,
+  "height": 900,
   "layer": [
     {
       "data": { 
         "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/ne_110m_admin_0_countries.json",
         "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
       },
-      "projection": {"type": "albersUsa"},
+      "projection": {"type": "equalEarth"},
       "mark": {
         "type": "geoshape",
         "fill": "#eee",
@@ -19,7 +19,7 @@
     },
     {
       "data": { 
-        "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/powerplants%20(global)%20-%20global_power_plants_modified.csv"
+        "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/w9%20homework/data/powerplants%20(global)%20-%20global_power_plants_modified.csv"
       },
       "mark": {
         "type": "circle"
@@ -33,9 +33,19 @@
           "field": "longitude",
           "type": "quantitative"
         },
-        "color": {"value": "#ff0000"},
-        "opacity": {"value": 0.1},
-        "size": {"value": 6}
+        "color": {
+          "field": "primary_fuel",
+          "type": "nominal",
+          "title": "Primary Fuel"
+        },
+        "opacity": {"value": 0.5},
+        "size": {"value": 2},
+        "tooltip": [
+          {"field": "country_long", "type": "nominal", "title": "Country"},
+          {"field": "name of powerplant", "type": "nominal", "title": "Name of Power Plant"},
+          {"field": "capacity in MW", "type": "quantitative", "title": "Capacity in MW"},
+          {"field": "primary_fuel", "type": "nominal", "title": "Primary Fuel"}
+        ]
       }
     }
   ]
