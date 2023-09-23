@@ -39,7 +39,7 @@
           "title": "Primary Fuel"
         },
         "opacity": {"value": 0.5},
-        "size": {"value": 2},
+        "size": {"value": 3},
         "tooltip": [
           {"field": "country_long", "type": "nominal", "title": "Country"},
           {"field": "name of powerplant", "type": "nominal", "title": "Name of Power Plant"},
