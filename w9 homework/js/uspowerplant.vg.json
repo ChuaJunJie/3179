@@ -6,7 +6,7 @@
   "layer": [
     {
       "data": { 
-        "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/states-10m.json",
+        "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/maps/states-10m.json",
         "format": {"type": "topojson", "feature": "states"}
       },
       "projection": {"type": "albersUsa"},
