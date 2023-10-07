@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <title>Week 10 Vega-Lite graph</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body style="background-color:peachpuff;">
+    <div class="page">
+        <h1>Greenhouse Gases Emission Comparison between Australia and United States of America</h1>
+
+        <p class="visualisationdesc">
+            Lately, the global temparature has been increasing and it is a very serious issue for us and our next generation. There are countless factors affecting the emission of greenhouse gases of a country. Thus, this visualization will discuss some of the biggest factors driving the CO2 emission higher.
+        </p>
+        <hr>
+        <div class="row">
+            <h2>Distribution of Power Plants In United States and Australia</h2>
+            <div id="plantmap" class="plantmap"></div>
+            <span class="plantmapdesc">
+                <p class="description">
+                    A conventional power plant uses coal, oil or natural gas as fuels to generate electricity. These fuels are burnt to generate heat energy and the heat energy powers the electrical generators. When the fuels are in the process of burning, it emits CO2 to the air. 
+                    
+                    <br>
+                    <br>
+                    A waste power plant uses a similar idea as a conventional power plant. Instead of using coal, oil or natural gas, it burns munipical waste and uses the heat to generate power for electrical generators. 
+                    <br>
+                    <br>
+                    On the left is a distribution map of these types of power plants in Australia and United States. 
+                    
+                </p>
+                <p class="instruction">
+                    Click on the legened to filter the types of power plants distributed over each country.
+                </p>
+            </span>
+        </div>
+        <hr>
+        <div class="row">
+            <h2>CO2 Emission Around the World</h2>
+            <span class="co2mapdesc">
+                <p class="description">
+                    The CO2 emission around the world shows no signs of decreasing from 1960 to 2019. All countries show signs of increasing in CO2 emission, and this is due to a lot of factors, such as industrial revolution and population explosion. 
+                    
+                </p>
+                <p class="instruction">
+                    Use the slider to see the CO2 emission over the years.
+                </p>
+            </span>
+            <div id="co2map" class="co2map"></div>
+        </div>
+        <hr>
+        <div class="row">
+            <h2>Comparison between United States and Australia in Agrofood CO2 Emission</h2>
+            <div id="agrofood" class="agrofood"></div>
+            <span class="agrofooddesc">
+                <p class="description">
+                    Agrofood refers to food commodity or products made from crops. It is clear that United States produces more carbon dioxide than Australia in this industry as well. This is because United States has higher population than Australia, more people means more food consumption, and more food consumption means more food processing has to be done as well as food transportation.
+                </p>
+                <p class="instruction">
+                    Hover over the area to see the total CO2 emission for each category.
+                </p>
+            </span>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        var vg_1 = "./js/uspowerplant.vg.json";
+
+        vegaEmbed("#plantmap", vg_1).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        var vg_2 = "./js/agrofoodtype.vg.json";
+
+        vegaEmbed("#agrofood", vg_2).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        var vg_3 = "./js/co2emissionchoroplethmap.vg.json";
+
+        vegaEmbed("#co2map", vg_3).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+    </script>
+</body>
+
+</html>
