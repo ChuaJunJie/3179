@@ -8,7 +8,7 @@
             "width": 300,
             "height": 400,
             "data": {
-                "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/w9%20homework/data/usa%20power%20plant.csv"
+                "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/A2/data/us%20data/usa%20power%20plant.csv"
             },
             "transform": [
                 {
@@ -61,7 +61,7 @@
             "width": 300,
             "height": 400,
             "data": {
-                "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/au%20data/au%20power%20plant.csv"
+                "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/A2/data/au%20data/au%20power%20plant.csv"
             },
             "transform": [
                 {

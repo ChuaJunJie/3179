@@ -4,7 +4,7 @@
     "width": 800,
     "height": 400,
     "data": {
-        "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/amazon_deforestation.csv"
+        "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/A2/data/amazon_deforestation.csv"
     },
     "layer":
     [
