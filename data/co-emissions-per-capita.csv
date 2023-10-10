@@ -1,4 +1,4 @@
-Entity,Code,Year,Annual CO2‚ emissions (per capita)
+Entity,Code,Year,Annual CO2 emissions (per capita)
 Afghanistan,AFG,1949,0.001992146
 Afghanistan,AFG,1950,0.011265611
 Afghanistan,AFG,1951,0.012097932
@@ -1025,10 +1025,10 @@ Argentina,ARG,2018,4.0663075
 Argentina,ARG,2019,3.9894862
 Argentina,ARG,2020,3.7583838
 Argentina,ARG,2021,4.117966
-Armenia,ARM,1830,8.83201E-05
+Armenia,ARM,1830,8.83E-05
 Armenia,ARM,1831,0.000107208
-Armenia,ARM,1832,6.93768E-05
-Armenia,ARM,1833,8.59326E-05
+Armenia,ARM,1832,6.94E-05
+Armenia,ARM,1833,8.59E-05
 Armenia,ARM,1850,0.000461668
 Armenia,ARM,1855,0.001336478
 Armenia,ARM,1858,0.00182603
@@ -1304,10 +1304,10 @@ Asia,,1826,0
 Asia,,1827,0
 Asia,,1828,0
 Asia,,1829,0
-Asia,,1830,2.99809E-06
-Asia,,1831,3.58579E-06
-Asia,,1832,2.38181E-06
-Asia,,1833,2.97166E-06
+Asia,,1830,3.00E-06
+Asia,,1831,3.59E-06
+Asia,,1832,2.38E-06
+Asia,,1833,2.97E-06
 Asia,,1834,0
 Asia,,1835,0
 Asia,,1836,0
@@ -1324,12 +1324,12 @@ Asia,,1846,0
 Asia,,1847,0
 Asia,,1848,0
 Asia,,1849,0
-Asia,,1850,1.78161E-05
+Asia,,1850,1.78E-05
 Asia,,1851,0
 Asia,,1852,0
 Asia,,1853,0
 Asia,,1854,0
-Asia,,1855,5.45283E-05
+Asia,,1855,5.45E-05
 Asia,,1856,0
 Asia,,1857,0
 Asia,,1858,0.000562566
@@ -1531,10 +1531,10 @@ Asia (excl. China and India),,1826,0
 Asia (excl. China and India),,1827,0
 Asia (excl. China and India),,1828,0
 Asia (excl. China and India),,1829,0
-Asia (excl. China and India),,1830,1.42998E-05
-Asia (excl. China and India),,1831,1.70983E-05
-Asia (excl. China and India),,1832,1.13466E-05
-Asia (excl. China and India),,1833,1.4134E-05
+Asia (excl. China and India),,1830,1.43E-05
+Asia (excl. China and India),,1831,1.71E-05
+Asia (excl. China and India),,1832,1.13E-05
+Asia (excl. China and India),,1833,1.41E-05
 Asia (excl. China and India),,1834,0
 Asia (excl. China and India),,1835,0
 Asia (excl. China and India),,1836,0
@@ -1551,7 +1551,7 @@ Asia (excl. China and India),,1846,0
 Asia (excl. China and India),,1847,0
 Asia (excl. China and India),,1848,0
 Asia (excl. China and India),,1849,0
-Asia (excl. China and India),,1850,8.1735E-05
+Asia (excl. China and India),,1850,8.17E-05
 Asia (excl. China and India),,1851,0
 Asia (excl. China and India),,1852,0
 Asia (excl. China and India),,1853,0
@@ -9530,10 +9530,10 @@ Gambia,GMB,2018,0.24277644
 Gambia,GMB,2019,0.23950748
 Gambia,GMB,2020,0.2384809
 Gambia,GMB,2021,0.24837817
-Georgia,GEO,1830,6.3839E-05
-Georgia,GEO,1831,7.59102E-05
-Georgia,GEO,1832,5.01467E-05
-Georgia,GEO,1833,6.21133E-05
+Georgia,GEO,1830,6.38E-05
+Georgia,GEO,1831,7.59E-05
+Georgia,GEO,1832,5.01E-05
+Georgia,GEO,1833,6.21E-05
 Georgia,GEO,1850,0.000330421
 Georgia,GEO,1855,0.000958139
 Georgia,GEO,1858,0.001309594
@@ -14374,10 +14374,10 @@ Lower-middle-income countries,,1826,0
 Lower-middle-income countries,,1827,0
 Lower-middle-income countries,,1828,0
 Lower-middle-income countries,,1829,0
-Lower-middle-income countries,,1830,1.16426E-05
-Lower-middle-income countries,,1831,1.39069E-05
-Lower-middle-income countries,,1832,9.22729E-06
-Lower-middle-income countries,,1833,1.14811E-05
+Lower-middle-income countries,,1830,1.16E-05
+Lower-middle-income countries,,1831,1.39E-05
+Lower-middle-income countries,,1832,9.23E-06
+Lower-middle-income countries,,1833,1.15E-05
 Lower-middle-income countries,,1834,0
 Lower-middle-income countries,,1835,0
 Lower-middle-income countries,,1836,0
@@ -14394,7 +14394,7 @@ Lower-middle-income countries,,1846,0
 Lower-middle-income countries,,1847,0
 Lower-middle-income countries,,1848,0
 Lower-middle-income countries,,1849,0
-Lower-middle-income countries,,1850,6.54575E-05
+Lower-middle-income countries,,1850,6.55E-05
 Lower-middle-income countries,,1851,0
 Lower-middle-income countries,,1852,0
 Lower-middle-income countries,,1853,0
@@ -22430,7 +22430,7 @@ South America,,2018,2.5065114
 South America,,2019,2.505585
 South America,,2020,2.2737656
 South America,,2021,2.475527
-South Korea,KOR,1905,7.90436E-05
+South Korea,KOR,1905,7.90E-05
 South Korea,KOR,1909,0.000842526
 South Korea,KOR,1910,0.001050588
 South Korea,KOR,1911,0.001233052
@@ -23590,7 +23590,7 @@ Taiwan,TWN,2020,11.093657
 Taiwan,TWN,2021,11.85487
 Tajikistan,TJK,1830,0.000117347
 Tajikistan,TJK,1831,0.000139536
-Tajikistan,TJK,1832,9.21779E-05
+Tajikistan,TJK,1832,9.22E-05
 Tajikistan,TJK,1833,0.000114175
 Tajikistan,TJK,1850,0.000604436
 Tajikistan,TJK,1855,0.001753098
@@ -25639,10 +25639,10 @@ Upper-middle-income countries,,1826,0
 Upper-middle-income countries,,1827,0
 Upper-middle-income countries,,1828,0
 Upper-middle-income countries,,1829,0
-Upper-middle-income countries,,1830,2.74505E-05
-Upper-middle-income countries,,1831,3.28054E-05
-Upper-middle-income countries,,1832,2.17951E-05
-Upper-middle-income countries,,1833,2.71808E-05
+Upper-middle-income countries,,1830,2.75E-05
+Upper-middle-income countries,,1831,3.28E-05
+Upper-middle-income countries,,1832,2.18E-05
+Upper-middle-income countries,,1833,2.72E-05
 Upper-middle-income countries,,1834,0
 Upper-middle-income countries,,1835,0
 Upper-middle-income countries,,1836,0
