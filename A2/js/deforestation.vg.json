@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {"background": null, "view": {"stroke": null}},
+    "width": 800,
+    "height": 400,
+    "data": {
+        "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/amazon_deforestation.csv"
+    },
+    "layer":
+    [
+        {
+            "mark": {
+                "type": "line",
+                "point": true
+            },
+            "encoding": {
+                "x": {"field": "Ano/Estados", "type": "temporal", "title": "Year"},
+                "y": {"field": "AMZ LEGAL", "type": "quantitative", "title": "Deforested Area (km2)"},
+                "tooltip": [{"field": "AMZ LEGAL", "type": "quantitative", "title": "Deforested Area (km2)"}]
+            }
+        }
+    ]    
+    
+  }

@@ -1,0 +1,70 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {"background": null, "view": {"stroke": null}},
+    "vconcat": [
+        {
+            "width": 650,
+            "height": 200,
+            "data": {
+                "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/Agrofood_co2_emission.csv"
+            },
+            "transform": [{
+                "filter": "datum.Area=='United States of America' || datum.Area=='Australia'"
+            }],
+            "mark": {"type": "area", "point": true},
+            "encoding": {
+                "x": {"timeUnit": "year", "field": "Year", "type": "temporal", "title": "Year"},
+                "y": {"field": "Food Household Consumption", "type": "quantitative", "title": "Food Household Consumption (kt)"},
+                "color": {"field": "Area", "type": "nominal"},
+                "tooltip": 
+                [
+                    {"field": "Area", "type": "nominal", "title": "Country"},
+                    {"field": "Food Household Consumption", "type": "quantitative", "title": "Total Household Food Consumption (kt)", "format": ".2f"}
+                ]
+            }
+        },
+        {
+            "width": 650,
+            "height": 200,
+            "data": {
+                "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/Agrofood_co2_emission.csv"
+            },
+            "transform": [{
+                "filter": "datum.Area=='United States of America' || datum.Area=='Australia'"
+            }],
+            "mark": {"type": "area", "point": true},
+            "encoding": {
+                "x": {"timeUnit": "year", "field": "Year", "type": "temporal", "title": "Year"},
+                "y": {"field": "Food Processing", "type": "quantitative", "title": "Food Processing (kt)"},
+                "color": {"field": "Area", "type": "nominal"},
+                "tooltip": 
+                [
+                    {"field": "Area", "type": "nominal", "title": "Country"},
+                    {"field": "Food Processing", "type": "quantitative", "title": "Total Food Processing (kt)", "format": ".2f"}
+                ]
+            }
+        },
+        {
+            "width": 650,
+            "height": 200,
+            "data": {
+                "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/Agrofood_co2_emission.csv"
+            },
+            "transform": [{
+                "filter": "datum.Area=='United States of America' || datum.Area=='Australia'"
+            }],
+            "mark": {"type": "area", "point": true},
+            "encoding": {
+                "x": {"timeUnit": "year", "field": "Year", "type": "temporal", "title": "Year"},
+                "y": {"field": "Food Transport", "type": "quantitative", "title": "Food Transport (kt)"},
+                "color": {"field": "Area", "type": "nominal"},
+                "tooltip": 
+                [
+                    {"field": "Area", "type": "nominal", "title": "Country"},
+                    {"field": "Food Transport", "type": "quantitative", "title": "Total Food Transport (kt)", "format": ".2f"}
+                ]
+            }
+        }
+    ]
+    
+}

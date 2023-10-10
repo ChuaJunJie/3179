@@ -1,0 +1,115 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {"background": null, "view": {"stroke": null}},
+    "hconcat":
+    [
+        {
+            "title": "Types of Power Plants in United States",
+            "width": 300,
+            "height": 400,
+            "data": {
+                "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/w9%20homework/data/usa%20power%20plant.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [{
+                     "op": "count",
+                     "field": "primary_fuel",
+                     "as": "fuel_count"
+                    }],
+                    "groupby": ["primary_fuel"]
+                  }
+            ],
+            "params": [
+                {
+                  "name": "highlight",
+                  "select": {"type": "point", "on": "pointerover"}
+                },
+                {"name": "select", "select": "point"}
+            ],
+            "mark": {
+                "type": "bar","stroke": "black","cursor": "pointer"
+            },
+            "encoding": {
+                "x": {"field": "fuel_count", "type": "quantitative", "title": "Number of Power Plants"},
+                "y": {"field": "primary_fuel", "type": "nominal", "sort": "-x", "title": "Fuel Type"},
+                "color": {"type": "nominal", "field": "primary_fuel", "title": "Fuel Type"},
+                "tooltip": [{"field": "fuel_count", "title": "Number of Power Plants"}, {"field": "primary_fuel", "title": "Fuel Type"}],
+                "fillOpacity": {
+                    "condition": {"param": "select", "value": 1},
+                    "value": 0.3
+                },
+                "strokeWidth": {
+                    "condition": [
+                        {
+                        "param": "select",
+                        "empty": false,
+                        "value": 2
+                        },
+                        {
+                        "param": "highlight",
+                        "empty": false,
+                        "value": 1
+                        }
+                    ],
+                "value": 0
+                }
+            } 
+        },
+        {
+            "title": "Types of Power Plants in Australia",
+            "width": 300,
+            "height": 400,
+            "data": {
+                "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/au%20data/au%20power%20plant.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [{
+                     "op": "count",
+                     "field": "primary_fuel",
+                     "as": "fuel_count"
+                    }],
+                    "groupby": ["primary_fuel"]
+                }
+            ],
+            "params": [
+                {
+                  "name": "highlight",
+                  "select": {"type": "point", "on": "pointerover"}
+                },
+                {"name": "select", "select": "point"}
+            ],
+            "mark": {
+                "type": "bar","stroke": "black","cursor": "pointer"
+            },
+            "encoding": {
+                "x": {"field": "fuel_count", "type": "quantitative", "title": "Number of Power Plants"},
+                "y": {"field": "primary_fuel", "type": "nominal", "sort": "-x", "title": "Fuel Type"},
+                "color": {"type": "nominal", "field": "primary_fuel", "title": "Fuel Type"},
+                "tooltip": [{"field": "fuel_count", "title": "Number of Power Plants"}, {"field": "primary_fuel", "title": "Fuel Type"}],
+                "fillOpacity": {
+                    "condition": {"param": "select", "value": 1},
+                    "value": 0.3
+                },
+                "strokeWidth": {
+                    "condition": [
+                        {
+                        "param": "select",
+                        "empty": false,
+                        "value": 2
+                        },
+                        {
+                        "param": "highlight",
+                        "empty": false,
+                        "value": 1
+                        }
+                    ],
+                "value": 0
+                }
+            } 
+        }
+    ]
+    
+    
+  }

@@ -1,0 +1,80 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "config": {"background": null, "view": {"stroke": null}},
+    "width": 800,
+    "height": 400,
+    "params": [
+      {
+        "name": "year_selection",
+        "value": 1980,
+        "bind": {
+          "input": "range",
+          "min": 1949,
+          "max": 2020,
+          "step": 1,
+          "name": "Select the year:"
+        }
+      }
+    ],
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+          "format": {"type": "topojson", "feature": "oceans"}
+          },
+          "mark": {"type": "geoshape", "fill": "skyblue"}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/WorldMapWithGraticules.topojson",
+          "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+          },
+          "mark": {"type": "geoshape", "fill": null, "stroke":
+          "lightgray"}
+      },
+      {
+        "data": {
+            "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/co-emissions-per-capita.csv"
+        },
+        "transform": [
+          {
+            "lookup": "Code",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/maps/ne_110m_admin_0_countries.json",
+                "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+              },
+              "key": "properties.ISO_A3_EH",
+              "fields": ["properties","type","geometry"]
+            }
+          },
+          {"filter": "datum.Year == year_selection"}
+        ],
+        "projection": {"type": "equalEarth"},
+        "mark": {
+          "type": "geoshape", 
+          "stroke": "green",
+          "strokeWidth": 0.5
+        },
+        "encoding": {
+          "color": 
+          {
+            "field": "Annual CO2 emissions (per capita)", 
+            "type": "quantitative", 
+            "scale": {"domain": [0, 0.1, 0.2, 0.5, 1, 2, 5, 10, 15], "range": ["f5f5f5", "beige", "beige", "lightyellow", "yellow", "darkorange", "lightred", "red", "darkred"]},
+            "title": "CO2 Emission per capita (tonnes)",
+            "legend": {
+              "orient": "bottom-right",
+              "direction": "horizontal",
+              "columns": 2            
+            }
+          },
+          "tooltip": [
+            {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+            {"field": "Annual CO2 emissions (per capita)", "type": "quantitative", "format": ".2f", "title": "CO2 Emission per capita(tonnes)"}
+          ]
+        }
+      }
+    ]
+    
+  }

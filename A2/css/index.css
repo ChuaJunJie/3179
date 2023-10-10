@@ -1,0 +1,107 @@
+.popmapdesc {
+    height: 400px;
+    width: 300px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: top;
+}
+
+.plantmapdesc{
+    height: 400px;
+    width: 300px;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: top;
+}
+
+
+.co2mapdesc.left{
+    height: 400px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 40px;
+}
+
+.agrofooddesc.left{
+    height: 400px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 20px;
+}
+
+.agrofood{
+    margin-left: auto;
+    padding-left: 20px;
+}
+
+.deforestationdesc{
+    height: 400px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.powerplantbardesc.left{
+    height: 400px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 20px;
+}
+
+.visualisationdesc{
+    text-align: center;
+    word-spacing: 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    height: fit-content;
+    margin-top: 5%;
+}
+
+.page {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: papayawhip;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 36px;
+}
+
+.description {
+    font-size: 20px;
+    word-spacing: 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.instruction {
+    font-size: 16px;
+    word-spacing: 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: grey;
+}

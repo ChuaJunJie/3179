@@ -1,0 +1,149 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "config": {"background": null, "view": {"stroke": null}},
+  "vconcat": 
+  [
+    {
+      "width": 800,
+      "height": 400,
+      "layer": [
+        {
+          "data": { 
+            "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/maps/states-10m.json",
+            "format": {"type": "topojson", "feature": "states"}
+          },
+          "projection": {"type": "albersUsa"},
+          "mark": {
+            "type": "geoshape",
+            "fill": "#eee",
+            "stroke": "#757575",
+            "strokeWidth": 0.5
+          },
+          "encoding": {
+            "tooltip": [
+              {"field": "properties.name", "type": "nominal", "title": "State"}
+            ]
+          }
+        },
+        {
+          "data": { 
+            "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/w9%20homework/data/usa%20power%20plant.csv"
+          },
+          "transform": [
+            {"filter": " datum.primary_fuel == 'Oil' || datum.primary_fuel == 'Coal' || datum.primary_fuel == 'Gas' || datum.primary_fuel == 'Waste'"}
+          ],
+          "mark": {
+            "type": "circle"
+          },
+          "params": [
+            {
+              "name": "filter",
+              "select": {"type": "point", "fields": ["primary_fuel"]},
+              "bind": "legend"
+            }
+          ],
+
+          "encoding": {
+            "latitude": {
+              "field": "latitude",
+              "type": "quantitative"
+            },
+            "longitude":{
+              "field": "longitude",
+              "type": "quantitative"
+            },
+            "color": {
+              "field": "primary_fuel",
+              "type": "nominal",
+              "title": "Primary Fuel"
+            },
+            "opacity": {
+              "condition": {"selection": "filter", "value": 1},
+              "value": 0.1
+            },
+            "size": {
+              "condition": {"selection": "filter", "value": 10}, 
+              "value": 4
+            },
+            "tooltip": [
+              {"field": "name of powerplant", "type": "nominal", "title": "Name of Power Plant"},
+              {"field": "capacity in MW", "type": "quantitative", "title": "Capacity (MW)", "format": ".2f"},
+              {"field": "primary_fuel", "type": "nominal", "title": "Primary Fuel"}
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "width": 800,
+      "height": 400,
+      "layer": [
+        {
+          "data": { 
+            "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/maps/states.json",
+            "format": {"type": "topojson", "feature": "states"}
+          },
+          "projection": {"type": "mercator"},
+          "mark": {
+            "type": "geoshape",
+            "fill": "#eee",
+            "stroke": "#757575",
+            "strokeWidth": 0.5
+          },
+          "encoding": {
+            "tooltip": [
+              {"field": "properties.STATE_NAME", "type": "nominal", "title": "State"}
+            ]
+          }
+        },
+        {
+          "data": { 
+            "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/au%20data/au%20power%20plant.csv"
+          },
+          "transform": [
+            {"filter": " datum.primary_fuel == 'Oil' || datum.primary_fuel == 'Coal' || datum.primary_fuel == 'Gas' || datum.primary_fuel == 'Waste'"}
+          ],
+          "mark": {
+            "type": "circle"
+          },
+          "params": [
+            {
+              "name": "filter",
+              "select": {"type": "point", "fields": ["primary_fuel"]},
+              "bind": "legend"
+            }
+          ],
+
+          "encoding": {
+            "latitude": {
+              "field": "latitude",
+              "type": "quantitative"
+            },
+            "longitude":{
+              "field": "longitude",
+              "type": "quantitative"
+            },
+            "color": {
+              "field": "primary_fuel",
+              "type": "nominal",
+              "title": "Primary Fuel"
+            },
+            "opacity": {
+              "condition": {"selection": "filter", "value": 1},
+              "value": 0.1
+            },
+            "size": {
+              "value": 20
+            },
+            "tooltip": [
+              {"field": "name of powerplant", "type": "nominal", "title": "Name of Power Plant"},
+              {"field": "capacity in MW", "type": "quantitative", "title": "Capacity in MW", "format": ".2f"},
+              {"field": "primary_fuel", "type": "nominal", "title": "Primary Fuel"}
+            ]
+          }
+        }
+      ]
+    }
+  ]
+  
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <title>Assignment 2</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body style="background-color:peachpuff;">
+    <div class="page">
+        <h1>Greenhouse Gases Emission Around The World</h1>
+        <hr class="visualisationdesc">
+        <p class="visualisationdesc">
+            Lately, the global temparature has been increasing and it is a very serious issue for us and our next generation. There are countless factors affecting the emission of greenhouse gases of a country. Thus, this visualization will discuss some of the biggest factors driving the CO2 emission higher.
+        </p>
+
+        <div class="row">
+            <h2>Population of the World at Year 2020</h2>
+            <div id="popmap" class="plantmap"></div>
+            <span class="popmapdesc">
+                <p class="description">
+                    First, let's dive into a general overview of the population of each country in the world. It is clear that United States has one of the highest population in the world, whereas if we compare Australia's population with United States, Australia has lower population count. We can use the legend to compare the colour of a country, the redder the colour becomes, the more population it has.                     
+                </p>
+                <p class="instruction">
+                    Click on the countries to see their total population.
+                </p>
+            </span>
+        </div>
+
+        
+
+        <div class="row">
+            <h2>CO2 Emission Around the World</h2>
+            <span class="co2mapdesc left">
+                <p class="description">
+                    The visualization shows CO2 emission per capita, which means CO2 emission per person in a country. The value is calculated by taking the total population divide the total CO2 emission. 
+
+                    <br>
+                    <br>
+
+                    It is clear to see that countries with better quality of life generates more CO2 per person. Australia and United States has better quality of life for their citizens compared to other countries.     
+                    
+                </p>
+                <p class="instruction">
+                    Use the slider to see the CO2 emission over the years.
+                </p>
+            </span>
+            <div id="co2map" class="co2map"></div>
+        </div>
+
+
+
+        <div class="row">
+            <h2>Non-Renewable Fuel Power Plants In United States and Australia</h2>
+            <div id="plantmap" class="plantmap"></div>
+            <span class="plantmapdesc">
+                <p class="description">
+                    A conventional power plant uses non-renewable fuels, such as coal, oil or natural gas as fuels to generate electricity. These fuels are burnt to generate heat energy and the heat energy powers the electrical generators. When the fuels are in the process of burning, it emits CO2 to the air. 
+                    
+                    <br>
+                    <br>
+                    A waste power plant uses a similar idea as a conventional power plant. Instead of using coal, oil or natural gas, it burns munipical waste and uses the heat to generate power for electrical generators. 
+                    <br>
+                    <br>
+                    On the left is a distribution map of these types of power plants in Australia and United States. 
+                    
+                </p>
+                <p class="instruction">
+                    Click on the legened to filter the types of power plants distributed over each country.
+                </p>
+            </span>
+        </div>
+
+
+        <div class="row">
+            <h2>Comparison between United States and Australia in Agrofood CO2 Emission</h2>
+            <span class="agrofooddesc left">
+                <p class="description">
+                    Agrofood refers to food commodity or products made from crops. It is clear that United States produces more carbon dioxide than Australia in this industry as well. This is because United States has higher population than Australia, more people means more food consumption, and more food consumption means more food processing has to be done as well as food transportation.
+                </p>
+                <p class="instruction">
+                    Hover over the area to see the total CO2 emission for each category.
+                </p>
+            </span>
+            <div id="agrofood" class="agrofood"></div>
+        </div>
+
+
+        <div class="row">
+            <h2>Deforestation of Amazon Forest From 2004 to 2019</h2>
+            <div id="deforestation" class="deforestation"></div>
+            <span class="deforestationdesc">
+                <p class="description">
+                    Deforestation has been a crucial issue since as long as from the 90s. Human conducted mass deforestation to obtain the raw material for a lot of products. Mass deforestation causes less trees to absorb the CO2 in the air.
+
+                    <br>
+                    <br>
+
+                    One of the biggest forest in the world is the Amazon Rainforest. On the left is a visualization showing the annual deforested area of the Amazon Rainforest.
+                </p>
+                <p class="instruction">
+                    Hover over the point to see the exact value of deforested area in each year.
+                </p>
+            </span>
+        </div>
+
+        <div class="row">
+            <h2>Conclusion</h2>
+            
+            <span class="powerplantbardesc left">
+                <p class="description">
+                    Even though the power plant map shows that United States contains numerous of non-renewable fuels power plants, it is actually not the case. United States has more renewable power plants, as shown in the visualization on the right.
+
+                    <br>
+                    <br>
+
+                    
+                </p>
+                <p class="instruction">
+                    Hover over the area to see the exact number of a type of power plants.
+                </p>
+            </span>
+            <div id="powerplantbar" class="powerplantbar"></div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+
+        var vg_1 = "./js/powerplantmap.vg.json";
+
+        vegaEmbed("#plantmap", vg_1).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        var vg_2 = "./js/agrofoodtype.vg.json";
+
+        vegaEmbed("#agrofood", vg_2).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        var vg_3 = "./js/co2emissionchoroplethmap.vg.json";
+
+        vegaEmbed("#co2map", vg_3).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        var vg_4 = "./js/populationchoroplethmap.vg.json";
+
+        vegaEmbed("#popmap", vg_4).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        var vg_5 = "./js/deforestation.vg.json";
+
+        vegaEmbed("#deforestation", vg_5).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        var vg_6 = "./js/powerplantbar.vg.json";
+
+        vegaEmbed("#powerplantbar", vg_6).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+    </script>
+</body>
+
+</html>
