@@ -64,7 +64,7 @@
 .visualisationdesc{
     text-align: center;
     word-spacing: 2px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Calibri, sans-serif;
     font-size: 22px;
     width: 90%;
     margin-left: auto;
@@ -96,12 +96,44 @@ h2 {
 .description {
     font-size: 20px;
     word-spacing: 2px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Calibri, sans-serif;
 }
 
 .instruction {
     font-size: 16px;
     word-spacing: 2px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Calibri, sans-serif;
     color: grey;
+}
+
+.hightlightCoal{
+    color: #4c78a8;
+}
+
+.hightlightGas{
+    color: orange;
+}
+
+.hightlightOil{
+    color: red;
+}
+
+.hightlightWaste{
+    color: #73b2b4;
+}
+
+.high {
+    color: red
+}
+
+.low {
+    color: orange
+}
+
+.aus {
+    color: #829cb6;
+}
+
+.usa {
+    color: orange;
 }

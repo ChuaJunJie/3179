@@ -15,7 +15,7 @@
             "encoding": {
                 "x": {"timeUnit": "year", "field": "Year", "type": "temporal", "title": "Year"},
                 "y": {"field": "Food Household Consumption", "type": "quantitative", "title": "Food Household Consumption (kt)"},
-                "color": {"field": "Area", "type": "nominal"},
+                "color": {"field": "Area", "type": "nominal", "title": "Country"},
                 "tooltip": 
                 [
                     {"field": "Area", "type": "nominal", "title": "Country"},
