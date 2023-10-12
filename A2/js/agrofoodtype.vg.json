@@ -32,17 +32,29 @@
             "transform": [{
                 "filter": "datum.Area=='United States of America' || datum.Area=='Australia'"
             }],
-            "mark": {"type": "area", "point": true},
-            "encoding": {
-                "x": {"timeUnit": "year", "field": "Year", "type": "temporal", "title": "Year"},
-                "y": {"field": "Food Processing", "type": "quantitative", "title": "Food Processing (kt)"},
-                "color": {"field": "Area", "type": "nominal"},
-                "tooltip": 
-                [
-                    {"field": "Area", "type": "nominal", "title": "Country"},
-                    {"field": "Food Processing", "type": "quantitative", "title": "Total Food Processing (kt)", "format": ".2f"}
-                ]
+            "layer":[
+                {"mark": {"type": "area", "point": true},
+                "encoding": {
+                    "x": {"timeUnit": "year", "field": "Year", "type": "temporal", "title": "Year"},
+                    "y": {"field": "Food Processing", "type": "quantitative", "title": "Food Processing (kt)"},
+                    "color": {"field": "Area", "type": "nominal"},
+                    "tooltip": 
+                    [
+                        {"field": "Area", "type": "nominal", "title": "Country"},
+                        {"field": "Food Processing", "type": "quantitative", "title": "Total Food Processing (kt)", "format": ".2f"}
+                    ]
+                }
+            },
+            {
+                "mark": {
+                    "type": "text",
+                    "fontSize": 12,
+                    "fontWeight":"lighter"
+                },
+                "encoding": {"text": {"value": "Positive correlation between poopulation and CO2 emission"}}
             }
+        ]
+            
         },
         {
             "width": 650,
@@ -66,5 +78,4 @@
             }
         }
     ]
-    
 }

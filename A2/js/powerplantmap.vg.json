@@ -103,9 +103,6 @@
           "transform": [
             {"filter": " datum.primary_fuel == 'Oil' || datum.primary_fuel == 'Coal' || datum.primary_fuel == 'Gas' || datum.primary_fuel == 'Waste'"}
           ],
-          "mark": {
-            "type": "circle"
-          },
           "params": [
             {
               "name": "filter",
@@ -113,34 +110,52 @@
               "bind": "legend"
             }
           ],
-
-          "encoding": {
-            "latitude": {
-              "field": "latitude",
-              "type": "quantitative"
+          "layer": [
+            {
+              "mark": {
+                "type": "circle"
+              },
+              "encoding": {
+                "latitude": {
+                  "field": "latitude",
+                  "type": "quantitative"
+                },
+                "longitude":{
+                  "field": "longitude",
+                  "type": "quantitative"
+                },
+                "color": {
+                  "field": "primary_fuel",
+                  "type": "nominal",
+                  "title": "Primary Fuel"
+                },
+                "opacity": {
+                  "condition": {"selection": "filter", "value": 1},
+                  "value": 0.1
+                },
+                "size": {
+                  "value": 20
+                },
+                "tooltip": [
+                  {"field": "name of powerplant", "type": "nominal", "title": "Name of Power Plant"},
+                  {"field": "capacity in MW", "type": "quantitative", "title": "Capacity in MW", "format": ".2f"},
+                  {"field": "primary_fuel", "type": "nominal", "title": "Primary Fuel"}
+                ]
+              }
             },
-            "longitude":{
-              "field": "longitude",
-              "type": "quantitative"
-            },
-            "color": {
-              "field": "primary_fuel",
-              "type": "nominal",
-              "title": "Primary Fuel"
-            },
-            "opacity": {
-              "condition": {"selection": "filter", "value": 1},
-              "value": 0.1
-            },
-            "size": {
-              "value": 20
-            },
-            "tooltip": [
-              {"field": "name of powerplant", "type": "nominal", "title": "Name of Power Plant"},
-              {"field": "capacity in MW", "type": "quantitative", "title": "Capacity in MW", "format": ".2f"},
-              {"field": "primary_fuel", "type": "nominal", "title": "Primary Fuel"}
-            ]
-          }
+            {
+              "mark": {
+                "type": "text",
+                "dy": -230,
+                "dx": 250,
+                "fontSize": 12
+              },
+              "encoding": {
+                "text": {"value": ["There are more oil power plants in US than", "all the power plants in Australia combined."]}
+              }
+            }
+          ]
+          
         }
       ]
     }
