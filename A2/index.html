@@ -24,7 +24,7 @@
 
         <div class="row">
             <h2>Population of the World at Year 2020</h2>
-            <div id="popmap" class="plantmap"></div>
+            <div id="popmap" class="plantmap left"></div>
             <span class="popmapdesc">
                 <p class="description">
                     First, let's dive into a general overview of the population of each country in the world. It is clear that <strong>United States</strong> has one of the <strong><span class="high">highest</span></strong> population in the world, whereas if we compare Australia's population with United States, <strong>Australia</strong> has <strong><span class="low">lower</span></strong> population count. We can use the legend to compare the colour of a country, the redder the colour becomes, the more population it has.                     
@@ -60,7 +60,7 @@
 
         <div class="row">
             <h2>Non-Renewable Fuel Power Plants In United States and Australia</h2>
-            <div id="plantmap" class="plantmap"></div>
+            <div id="plantmap" class="plantmap left"></div>
             <span class="plantmapdesc">
                 <p class="description">
                     A conventional power plant uses non-renewable fuels, such as <span class="hightlightCoal">coal</span>, <span  class="hightlightOil">oil</span> or <span class="hightlightGas">gas</span>  as fuels to generate electricity. These fuels are burnt to generate heat energy and the heat energy powers the electrical generators. When the fuels are in the process of burning, it emits CO2 to the air. 
@@ -137,37 +137,37 @@
 
         var vg_1 = "./js/powerplantmap.vg.json";
 
-        vegaEmbed("#plantmap", vg_1).then(function (result) {
+        vegaEmbed("#plantmap", vg_1, {"actions": false}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
         var vg_2 = "./js/agrofoodtype.vg.json";
 
-        vegaEmbed("#agrofood", vg_2).then(function (result) {
+        vegaEmbed("#agrofood", vg_2, {"actions": false}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
         var vg_3 = "./js/co2emissionchoroplethmap.vg.json";
 
-        vegaEmbed("#co2map", vg_3).then(function (result) {
+        vegaEmbed("#co2map", vg_3, {"actions": false}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
         var vg_4 = "./js/populationchoroplethmap.vg.json";
 
-        vegaEmbed("#popmap", vg_4).then(function (result) {
+        vegaEmbed("#popmap", vg_4, {"actions": false}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
         var vg_5 = "./js/deforestation.vg.json";
 
-        vegaEmbed("#deforestation", vg_5).then(function (result) {
+        vegaEmbed("#deforestation", vg_5, {"actions": false}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
 
         var vg_6 = "./js/powerplantbar.vg.json";
 
-        vegaEmbed("#powerplantbar", vg_6).then(function (result) {
+        vegaEmbed("#powerplantbar", vg_6, {"actions": false}).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
     </script>
