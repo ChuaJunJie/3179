@@ -9,7 +9,7 @@
       "layer": [
         {
           "data": { 
-            "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/maps/states-10m.json",
+            "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/A2/data/maps/states-10m.json",
             "format": {"type": "topojson", "feature": "states"}
           },
           "projection": {"type": "albersUsa"},
@@ -22,7 +22,7 @@
         },
         {
           "data": { 
-            "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/w9%20homework/data/usa%20power%20plant.csv"
+            "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/A2/data/us%20data/usa%20power%20plant.csv"
           },
           "transform": [
             {"filter": " datum.primary_fuel == 'Oil' || datum.primary_fuel == 'Coal' || datum.primary_fuel == 'Gas' || datum.primary_fuel == 'Waste'"}
@@ -75,7 +75,7 @@
       "layer": [
         {
           "data": { 
-            "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/maps/au-states-topo.json",
+            "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/A2/data/maps/au-states-topo.json",
             "format": {"type": "topojson", "feature": "austates"}
           },
           "projection": {"type": "mercator"},
@@ -88,7 +88,7 @@
         },
         {
           "data": { 
-            "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/au%20data/au%20power%20plant.csv"
+            "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/A2/data/au%20data/au%20power%20plant.csv"
           },
           "transform": [
             {"filter": " datum.primary_fuel == 'Oil' || datum.primary_fuel == 'Coal' || datum.primary_fuel == 'Gas' || datum.primary_fuel == 'Waste'"}

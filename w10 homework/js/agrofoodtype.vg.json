@@ -6,7 +6,7 @@
             "width": 700,
             "height": 200,
             "data": {
-                "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/Agrofood_co2_emission.csv"
+                "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/A2/data/Agrofood_co2_emission.csv"
             },
             "transform": [{
                 "filter": "datum.Area=='United States of America' || datum.Area=='Australia'"
@@ -27,7 +27,7 @@
             "width": 700,
             "height": 200,
             "data": {
-                "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/Agrofood_co2_emission.csv"
+                "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/A2/data/Agrofood_co2_emission.csv"
             },
             "transform": [{
                 "filter": "datum.Area=='United States of America' || datum.Area=='Australia'"
@@ -48,7 +48,7 @@
             "width": 700,
             "height": 200,
             "data": {
-                "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/data/Agrofood_co2_emission.csv"
+                "url": "https://raw.githubusercontent.com/ChuaJunJie/3179/main/A2/data/Agrofood_co2_emission.csv"
             },
             "transform": [{
                 "filter": "datum.Area=='United States of America' || datum.Area=='Australia'"
